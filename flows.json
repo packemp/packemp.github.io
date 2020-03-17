@@ -11,7 +11,7 @@
         "type": "http in",
         "z": "1f676413.5403d4",
         "name": "",
-        "url": "/packem",
+        "url": "/packemp",
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
