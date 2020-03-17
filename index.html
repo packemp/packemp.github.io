@@ -1,2 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+	<input type="text" id="pmessage" name="pmessage">
+    <button onclick="sendMessage()">Send</button>
+  </body>
 
-<script type="text/javascript" src="flows.json"></script>
+  <script>
+    function sendMessage() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discordapp.com/api/webhooks/689475975658209288/1fzUPCWU5R5LTL_KQ_3HKOHZxnd6sp5CRc9tU4iCkNq7pdwWMhJX5OOxVjDeFh9ujfom");
+
+      request.setRequestHeader('Content-type', 'application/json');
+      var packmessage = document.getElementById("pmessage").value
+
+      var params = {
+        content: packmessage
+      }
+	  
+      request.send(JSON.stringify(params));
+    }
+  </script>
+</html>
